@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Base64 } from 'js-base64';
+Base64.extendString();
 
 class CharConverEditor extends React.Component {
   constructor(props) {
@@ -26,7 +28,7 @@ class CharConverEditor extends React.Component {
           defaultValue={this.state.value}
         />
         <h3>Output</h3>
-        <li>base64: {btoa(this.state.value)}</li>
+        <li>base64: {this.state.value.toBase64()}</li>
         <li>urlencode: {encodeURI(this.state.value)}</li>
         <li>unicodeescape: {escape(this.state.value)}</li>
       </div>
