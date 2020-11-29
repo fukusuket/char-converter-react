@@ -1,7 +1,7 @@
-function sum(x,y) {
-    return x + y
+function a(str) {
+    return str.split("").map(c => c)
 }
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('hoge', () => {
+    expect(a("abc")).toEqual(["a", "b", "c"]);
 });

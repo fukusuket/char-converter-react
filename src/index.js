@@ -28,6 +28,7 @@ class CharConverEditor extends React.Component {
           defaultValue={this.state.value}
         />
         <h3>Output</h3>
+        <li>strings: {this.state.value}</li>
         <li>base64: {this.state.value.toBase64()}</li>
         <li>urlencode: {encodeURI(this.state.value)}</li>
         <li>unicodeescape: {escape(this.state.value)}</li>
